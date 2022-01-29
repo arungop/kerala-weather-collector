@@ -1,0 +1,76 @@
+# Daily scraping
+name: Weather data
+
+# Controls when the action will run.
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+      - main
+  schedule:
+    - cron: '30 4 * * *'
+
+jobs:
+  autoscrape:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+
+    # Load repo and install R
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: r-lib/actions/setup-r@v1
+
+      - uses: r-lib/actions/setup-pandoc@v1
+
+      - name: Query dependencies
+        run: |
+          install.packages('remotes')
+        shell: Rscript {0}
+
+      - name: Restore R package cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
+          restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
+
+      - name: Install dependency packages
+        run: |
+          sudo apt-get install -y libxml2-dev libcurl4-openssl-dev libssl-dev default-jre-headless
+          sudo R CMD javareconf
+
+        # Set-up R packages
+      - name: Install libraries
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          install.packages('tidyverse')
+          install.packages('rJava')
+          remotes::install_github(c('ropensci/tabulizerjars', 'ropensci/tabulizer'), INSTALL_opts = '--no-multiarch', dependencies = c('Depends', 'Imports'))
+          install.packages('tabulizer')
+
+        shell: Rscript {0}
+
+        # Run R script
+      - name: Weather data
+        run: source('job.R')
+        shell: Rscript {0}
+
+ # Add new files in data folder, commit along with other modified files, push
+      - name: Commit files
+        if: ${{ github.event_name == 'schedule' }}
+        run: |
+          git config --local user.name actions-user
+          git config --local user.email "actions@github.com"
+          git add data/*
+          git commit -am "GH ACTION Headlines $(date)"
+          git push origin main
+        env:
+          REPO_KEY: ${{secrets.GITHUB_TOKEN}}
+          username: github-actions
+
+
