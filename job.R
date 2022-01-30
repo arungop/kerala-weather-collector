@@ -45,13 +45,12 @@ weather_daily <- merge(x = date, y = daily, by = "id") %>%
 Daily_combined <- rbind(weather_daily, weather_a ) %>%  # Rbind to append scrapped data
                    distinct(Station_Index_Number,Date,.keep_all = TRUE)
 
-
 # Write output
 write.csv(Daily_combined,"./data/weather_accum.csv", row.names = F,quote=F)
 write_json(Daily_combined,"./data/weather_accum.json", sep="")
 
 
-
+#view(Daily_combined)
 
 
 

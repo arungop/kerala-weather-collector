@@ -33,7 +33,7 @@ data <- data[,-1]
 data_tvm <- slice_head(data,n = 1)
  
 row_tri <- seq_len(nrow(data)) %% 3  #  Table issues fixed
-data_row_tri <- data[row_odd == 0, ] 
+data_row_tri <- data[row_tri == 0, ] 
 
 # Districts as headers
 combined <- rbind(data_tvm, data_row_tri ) %>% 
@@ -69,3 +69,9 @@ write.csv(df2,"./data/weather_warn_ts.csv", row.names = F,quote=F)
 
 #weather_a  <- read_csv("./data/weather_warn.csv") 
 #weather_t <-  read_csv("./data/weather_warn_ts.csv")
+
+view(warning_five)
+view(df2)
+
+
+
