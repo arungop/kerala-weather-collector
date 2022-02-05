@@ -5,7 +5,6 @@ library(tabulizer)
 library(tidyverse)
 library(lubridate)
 library(jsonlite)
-library(pdftables)
 
 
 # Source data
