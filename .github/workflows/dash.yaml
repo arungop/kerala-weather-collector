@@ -12,6 +12,7 @@ on:
       - main
   schedule:
     - cron: '10 11 * * *'
+    - cron: '00 08 * * *'
     
 jobs:
   autoscrape:
