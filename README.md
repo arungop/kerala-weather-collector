@@ -9,4 +9,6 @@ Updates daily weather data of Kerala, India from https://mausam.imd.gov.in/. Tha
 # [Download(.json)](https://arungop.github.io/kerala-weather-collector/data/weather_accum.json)
 
 
+# Five days weather warning dashboard
 
+[Check now!](https://keralaweather.netlify.app)

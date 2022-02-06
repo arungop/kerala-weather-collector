@@ -11,12 +11,19 @@ output:
       code_font:
         google: JetBrains Mono
     orientation: columns
-    vertical_layout: fill
+    vertical_layout: scroll
+    social: menu
+    source_code: embed
 ---
 
+
+Last compiled on : `r format(Sys.time(), '%d %B, %Y')`
+
 ```{r setup, include=FALSE}
+
+
 if (!require("pacman")) install.packages("pacman")
-pacman::p_load(tidyverse,sf,glue,lubridate, flexdashboard)
+pacman::p_load(tidyverse,sf,glue,lubridate, flexdashboard, ggiraph)
 
 
 
@@ -49,7 +56,8 @@ colnames(weather_a)[1] <- "Name_1"
 
 # shp + csv
 
-map_latest <- merge(map_in,weather_a, by ="Name_1")
+map_latest <- merge(map_in,weather_a, by ="Name_1") %>% 
+  filter(!grepl('Lakshadweep', Name_1))
 
 
 # Col names
@@ -59,77 +67,6 @@ col3 <- sym(names(map_latest)[3])
 col4 <- sym(names(map_latest)[4])
 col5 <- sym(names(map_latest)[5])
 col6 <- sym(names(map_latest)[6])
-
-
-theme_gray
-function (base_size = 11, base_family = "") 
-{
- half_line <- base_size/2
-theme(
-  line = element_line(colour = "black", size = 0.5, 
-                      linetype = 1, lineend = "butt"), 
-  rect = element_rect(fill = "white", colour = "black",
-                      size = 0.5, linetype = 1),
-  text = element_text(family = base_family, face = "plain",
-                      colour = "black", size = base_size,
-                      lineheight = 0.9,  hjust = 0.5,
-                      vjust = 0.5, angle = 0, 
-                      margin = margin(), debug = FALSE), 
-  
-  axis.line = element_blank(), 
-  axis.text = element_text(size = rel(0.8), colour = "grey30"),
-  axis.text.x = element_text(margin = margin(t = 0.8*half_line/2), 
-                             vjust = 1), 
-  axis.text.y = element_text(margin = margin(r = 0.8*half_line/2),
-                             hjust = 1),
-  axis.ticks = element_line(colour = "grey20"), 
-  axis.ticks.length = unit(half_line/2, "pt"), 
-  axis.title.x = element_text(margin = margin(t = 0.8 * half_line,
-                                          b = 0.8 * half_line/2)),
-  axis.title.y = element_text(angle = 90, 
-                              margin = margin(r = 0.8 * half_line,
-                                          l = 0.8 * half_line/2)),
-  
-  legend.background = element_rect(colour = NA), 
-  legend.margin = unit(0.2, "cm"), 
-  legend.key = element_rect(fill = "grey95", colour = "white"),
-  legend.key.size = unit(1.2, "lines"), 
-  legend.key.height = NULL,
-  legend.key.width = NULL, 
-  legend.text = element_text(size = rel(0.8)),
-  legend.text.align = NULL,
-  legend.title = element_text(hjust = 0), 
-  legend.title.align = NULL, 
-  legend.position = "right", 
-  legend.direction = NULL,
-  legend.justification = "center", 
-  legend.box = NULL, 
-  
-  panel.background = element_rect(fill = "grey92", colour = NA),
-  panel.border = element_blank(), 
-  panel.grid.major = element_line(colour = "white"), 
-  panel.grid.minor = element_line(colour = "white", size = 0.25), 
-  panel.margin = unit(half_line, "pt"), panel.margin.x = NULL, 
-  panel.margin.y = NULL, panel.ontop = FALSE, 
-  
-  strip.background = element_rect(fill = "grey85", colour = NA),
-  strip.text = element_text(colour = "grey10", size = rel(0.8)),
-  strip.text.x = element_text(margin = margin(t = half_line,
-                                              b = half_line)), 
-  strip.text.y = element_text(angle = -90, 
-                              margin = margin(l = half_line, 
-                                              r = half_line)),
-  strip.switch.pad.grid = unit(0.1, "cm"),
-  strip.switch.pad.wrap = unit(0.1, "cm"), 
-  
-  plot.background = element_rect(colour = "white"), 
-  plot.title = element_text(size = rel(1.2), 
-                            margin = margin(b = half_line * 1.2)),
-  plot.margin = margin(half_line, half_line, half_line, half_line),
-  complete = TRUE)
-}
-
-
 ```
 
 Column {.tabset}
@@ -137,12 +74,13 @@ Column {.tabset}
 
 ### Day 1 
 
-```{r}
+```{r fig.width=8, fig.height=12, fig.fullwidth=TRUE }
 # Plot Day 1
 
 
-ggplot(map_latest) +
+g1 <- ggplot(map_latest) +
   geom_sf(aes(fill = !!col2)) +
+  geom_sf_interactive(aes(fill = !!col2,tooltip = Name_1))+
   scale_fill_manual(
     labels = c(
       "No alert",
@@ -154,20 +92,24 @@ ggplot(map_latest) +
     ),
     values = c('White', 'Green', 'Yellow', 'Orange', 'Red', '#8B0000')
   ) +
-  labs(title = "Kerala & Lakshadweep weather warning",
+  labs(title = "Kerala weather warning",
        subtitle = glue("Date: {col2} {year(now())}"),
       caption = "Source: IMD, Created by: Open-oven") +
-  theme_gray()
+  theme_void()
+
+girafe( ggobj = g1)
+
 ```
 
 ### Day 2 
 
-```{r}
+```{r fig.width=8, fig.height=12, fig.fullwidth=TRUE}
 # Plot Day 2
 
 
-ggplot(map_latest) +
+g2 <- ggplot(map_latest) +
   geom_sf(aes(fill = !!col3)) +
+  geom_sf_interactive(aes(fill = !!col3,tooltip = Name_1))+
   scale_fill_manual(
     labels = c(
       "No alert",
@@ -179,21 +121,24 @@ ggplot(map_latest) +
     ),
     values = c('White', 'Green', 'Yellow', 'Orange', 'Red', '#8B0000')
   ) +
-  labs(title = "Kerala & Lakshadweep weather warning",
+  labs(title = "Kerala weather warning",
        subtitle = glue("Date: {col3} {year(now())}"),
        caption = "Source: IMD, Created by: Open-oven") +
-  theme_gray()
+  theme_void()
+
+girafe( ggobj = g2)
 ```
 
 
 
 ### Day 3  
 
-```{r}
+```{r fig.width=8, fig.height=12, fig.fullwidth=TRUE}
 # Plot Day 3
 
-ggplot(map_latest) +
+g3 <- ggplot(map_latest) +
   geom_sf(aes(fill = !!col4)) +
+  geom_sf_interactive(aes(fill = !!col4,tooltip = Name_1))+
   scale_fill_manual(
     labels = c(
       "No alert",
@@ -205,20 +150,24 @@ ggplot(map_latest) +
     ),
     values = c('White', 'Green', 'Yellow', 'Orange', 'Red', '#8B0000')
   ) +
-  labs(title = "Kerala & Lakshadweep weather warning",
+  labs(title = "Kerala weather warning",
        subtitle = glue("Date: {col4} {year(now())}"),
        caption = "Source: IMD, Created by: Open-oven") +
-  theme_gray()
+  theme_void()
+
+girafe( ggobj = g3)
+
 ```
 
 ### Day 4 
 
-```{r}
+```{r fig.width=8, fig.height=12, fig.fullwidth=TRUE}
 
 # Plot Day 4
 
-ggplot(map_latest) +
+g4 <- ggplot(map_latest) +
   geom_sf(aes(fill = !!col5)) +
+  geom_sf_interactive(aes(fill = !!col5,tooltip = Name_1))+
   scale_fill_manual(
     labels = c(
       "No alert",
@@ -230,21 +179,24 @@ ggplot(map_latest) +
     ),
     values = c('White', 'Green', 'Yellow', 'Orange', 'Red', '#8B0000')
   ) +
-  labs(title = "Kerala & Lakshadweep weather warning",
+  labs(title = "Kerala weather warning",
        subtitle = glue("Date: {col5} {year(now())}"),
        caption = "Source: IMD, Created by: Open-oven") +
-  theme_gray()
+  theme_void()
+
+girafe( ggobj = g4)
 ```
 
 ### Day 5  
 
-```{r}
+```{r fig.width=8, fig.height=12, fig.fullwidth=TRUE}
 
 
 # Plot Day 5
 
-ggplot(map_latest) +
+g5 <- ggplot(map_latest) +
   geom_sf(aes(fill = !!col6)) +
+  geom_sf_interactive(aes(fill = !!col6,tooltip = Name_1))+
   scale_fill_manual(
     labels = c(
       "No alert",
@@ -256,9 +208,11 @@ ggplot(map_latest) +
     ),
     values = c('White', 'Green', 'Yellow', 'Orange', 'Red', '#8B0000')
   ) +
-  labs(title = "Kerala & Lakshadweep weather warning",
+  labs(title = "Kerala weather warning",
        subtitle = glue("Date: {col6} {year(now())}"),
        caption = "Source: IMD, Created by: Open-oven") +
-  theme_gray()
-```
+  theme_void()
 
+girafe( ggobj = g5)
+#ggiraph(code = {print(g5)}, zoom_max = 1, width = 10)
+```

@@ -55,6 +55,7 @@ jobs:
           install.packages('sf')
           install.packages('packman')
           install.packages('glue')
+          install.packages('ggiraph')
         shell: Rscript {0}
 
     # Render Dashboard using rmarkdown
