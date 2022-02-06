@@ -41,7 +41,7 @@ jobs:
 
       - name: Install dependency packages
         run: |
-          sudo apt-get install -y libxml2-dev libcurl4-openssl-dev libssl-dev default-jre-headless libudunits2-dev
+          sudo apt-get install -y libxml2-dev libcurl4-openssl-dev libssl-dev default-jre-headless libudunits2-dev libgdal-dev libproj-dev
           sudo R CMD javareconf
 
       # Set-up R packages
