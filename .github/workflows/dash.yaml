@@ -60,7 +60,7 @@ jobs:
 
     # Render Dashboard using rmarkdown
       - name: render Dashboard
-        run: rmarkdown::render("index.Rmd",output_file = "index.html", output_format = "flex_dashboard")
+        run: rmarkdown::render("index.Rmd", output_format = "html_document")
         shell: Rscript {0}
 
  # Add new files in data folder, commit along with other modified files, push

@@ -19,6 +19,9 @@ output:
 
 Last compiled on : `r format(Sys.time(), '%d %B, %Y')`
 
+
+
+
 ```{r setup, include=FALSE}
 
 
@@ -68,6 +71,9 @@ col4 <- sym(names(map_latest)[4])
 col5 <- sym(names(map_latest)[5])
 col6 <- sym(names(map_latest)[6])
 ```
+
+Maps 
+=====================================  
 
 Column {.tabset}
 -----------------------------------------------------------------------
@@ -216,3 +222,28 @@ g5 <- ggplot(map_latest) +
 girafe( ggobj = g5)
 #ggiraph(code = {print(g5)}, zoom_max = 1, width = 10)
 ```
+<!-- ### Day 6 -->
+<!-- ```{r} -->
+<!-- mapview(map_latest, zcol= !!col2, col.regions = c("snow", "grey", "red")) -->
+<!-- ``` -->
+
+Info
+=====================================  
+
+What does these alerts actually mean ?
+ 
++--------------+--------------------------------------+------------------------+ 
+| Type         | Intensity of rainfall                | Warning colour code    |
++==============+======================================+========================+
+| No alert     | Very Light Rainfall (0.1 to 2.4 mm)  | No warning (No action) |
++--------------+--------------------------------------+------------------------+
+| Green alert  | Light rainfall (2.5-15.5 mm)         | No warning (No action) |
++--------------+--------------------------------------+------------------------+
+| Yellow alert | Moderate (15.6-64.4 mm)              | Watch (Be updated)     |
++--------------+--------------------------------------+------------------------+
+| Orange alert | Heavy Rainfall (64.5-115.5 mm)       | Alert (Be prepared)    |
++--------------+--------------------------------------+------------------------+
+| Red alert    | Very Heavy Rainfall (115.6-204,4 mm) | Warning (Take action)  |
++--------------+--------------------------------------+------------------------+
+| Red alert    | Extremely Heavy Rainfall (>204.4mm)  | Warning (Take action)  |  
++--------------+--------------------------------------+------------------------+
