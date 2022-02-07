@@ -1,6 +1,6 @@
-District,06-Feb,07-Feb,08-Feb,09-Feb,10-Feb
-Thiruvananthapuram,L.,No rain,No rain,No rain,No rain
-Kollam,L.,No rain,No rain,No rain,No rain
+District,07-Feb,08-Feb,09-Feb,10-Feb,11-Feb
+Thiruvananthapuram,L.,L.,L.,No rain,No rain
+Kollam,L.,L.,L.,No rain,No rain
 Pathanamthitta,L.,L.,L.,No rain,No rain
 Alappuzha,L.,L.,L.,No rain,No rain
 Kottayam,L.,L.,L.,No rain,No rain
@@ -9,8 +9,8 @@ Idukki,L.,L.,L.,No rain,No rain
 Thrissur,No rain,No rain,No rain,No rain,No rain
 Palakkad,No rain,No rain,No rain,No rain,No rain
 Malappuram,No rain,No rain,No rain,No rain,No rain
-Kozhikode,L.,L.,No rain,No rain,No rain
-Wayanad,L.,L.,No rain,No rain,No rain
+Kozhikode,No rain,No rain,No rain,No rain,No rain
+Wayanad,No rain,No rain,No rain,No rain,No rain
 Kannur,No rain,No rain,No rain,No rain,No rain
 Kasaragode,No rain,No rain,No rain,No rain,No rain
-Lakshadweep,No rain,No rain,No rain,No rain,No rain
+Lakshadweep,No rain,No rain,L.,L.,L.
