@@ -1,7 +1,0 @@
-name: "Weather dashboard - kerala"
-navbar:
-  title: "Kerala weather dashboard"
-  left:
-    - text: "Warning maps"
-      href: _site/index.html
-    

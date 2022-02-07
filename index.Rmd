@@ -1,7 +1,6 @@
 ---
 title: "Kerala weather warning dashboard"
 output: 
-  html_document
   flexdashboard::flex_dashboard:
     theme:
       bg: "#101010"
