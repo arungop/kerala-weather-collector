@@ -80,7 +80,7 @@ Column {.tabset}
 
 ### Day 1 
 
-```{r fig.width=8, fig.height=12, fig.fullwidth=TRUE }
+```{r fig.width=8, fig.height=12, fig.fullwidth=TRUE, echo=FALSE }
 # Plot Day 1
 
 
@@ -91,7 +91,7 @@ g1 <- ggplot(map_latest) +
     labels = c(
       "No alert",
       "Green alert",
-      "Yello alert",
+      "Yellow alert",
       "Orange alert",
       "Red alert",
       "Extreme heavy rainfall"
@@ -109,7 +109,7 @@ girafe( ggobj = g1)
 
 ### Day 2 
 
-```{r fig.width=8, fig.height=12, fig.fullwidth=TRUE}
+```{r fig.width=8, fig.height=12, fig.fullwidth=TRUE , echo=FALSE}
 # Plot Day 2
 
 
@@ -120,7 +120,7 @@ g2 <- ggplot(map_latest) +
     labels = c(
       "No alert",
       "Green alert",
-      "Yello alert",
+      "Yellow alert",
       "Orange alert",
       "Red alert",
       "Extreme heavy rainfall"
@@ -139,7 +139,7 @@ girafe( ggobj = g2)
 
 ### Day 3  
 
-```{r fig.width=8, fig.height=12, fig.fullwidth=TRUE}
+```{r fig.width=8, fig.height=12, fig.fullwidth=TRUE, echo=FALSE}
 # Plot Day 3
 
 g3 <- ggplot(map_latest) +
@@ -149,7 +149,7 @@ g3 <- ggplot(map_latest) +
     labels = c(
       "No alert",
       "Green alert",
-      "Yello alert",
+      "Yellow alert",
       "Orange alert",
       "Red alert",
       "Extreme heavy rainfall"
@@ -167,7 +167,7 @@ girafe( ggobj = g3)
 
 ### Day 4 
 
-```{r fig.width=8, fig.height=12, fig.fullwidth=TRUE}
+```{r fig.width=8, fig.height=12, fig.fullwidth=TRUE, echo=FALSE}
 
 # Plot Day 4
 
@@ -178,7 +178,7 @@ g4 <- ggplot(map_latest) +
     labels = c(
       "No alert",
       "Green alert",
-      "Yello alert",
+      "Yellow alert",
       "Orange alert",
       "Red alert",
       "Extreme heavy rainfall"
@@ -195,7 +195,7 @@ girafe( ggobj = g4)
 
 ### Day 5  
 
-```{r fig.width=8, fig.height=12, fig.fullwidth=TRUE}
+```{r fig.width=8, fig.height=12, fig.fullwidth=TRUE, echo=FALSE}
 
 
 # Plot Day 5
@@ -207,7 +207,7 @@ g5 <- ggplot(map_latest) +
     labels = c(
       "No alert",
       "Green alert",
-      "Yello alert",
+      "Yellow alert",
       "Orange alert",
       "Red alert",
       "Extreme heavy rainfall"
