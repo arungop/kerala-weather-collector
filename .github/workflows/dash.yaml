@@ -13,6 +13,7 @@ on:
   schedule:
     - cron: '10 11 * * *'
     - cron: '00 08 * * *'
+    - cron: '30 03 * * *'
     
 jobs:
   autoscrape:
@@ -60,7 +61,7 @@ jobs:
 
     # Render Dashboard using rmarkdown
       - name: render Dashboard
-        run: rmarkdown::render("index.Rmd", output_format = "html_document")
+        run: rmarkdown::render_site()
         shell: Rscript {0}
 
  # Add new files in data folder, commit along with other modified files, push
@@ -70,7 +71,7 @@ jobs:
           git config --local user.name actions-user
           git config --local user.email "actions@github.com"
           git add -A
-          git commit -am "GH ACTION Headlines $(date)"
+          git commit -am "GH ACTION weather update $(date)"
           git push origin main
         env:
           REPO_KEY: ${{secrets.GITHUB_TOKEN}}

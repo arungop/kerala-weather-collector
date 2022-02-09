@@ -99,7 +99,7 @@ g1 <- ggplot(map_latest) +
     values = c('White', 'Green', 'Yellow', 'Orange', 'Red', '#8B0000')
   ) +
   labs(title = "Kerala weather warning",
-       subtitle = glue("Date: {col2} {year(now())}"),
+       subtitle = glue("Date: {col2}-{year(now())}"),
       caption = "Source: IMD, Created by: Open-oven") +
   theme_void()
 
@@ -128,7 +128,7 @@ g2 <- ggplot(map_latest) +
     values = c('White', 'Green', 'Yellow', 'Orange', 'Red', '#8B0000')
   ) +
   labs(title = "Kerala weather warning",
-       subtitle = glue("Date: {col3} {year(now())}"),
+       subtitle = glue("Date: {col3}-{year(now())}"),
        caption = "Source: IMD, Created by: Open-oven") +
   theme_void()
 
@@ -157,7 +157,7 @@ g3 <- ggplot(map_latest) +
     values = c('White', 'Green', 'Yellow', 'Orange', 'Red', '#8B0000')
   ) +
   labs(title = "Kerala weather warning",
-       subtitle = glue("Date: {col4} {year(now())}"),
+       subtitle = glue("Date: {col4}-{year(now())}"),
        caption = "Source: IMD, Created by: Open-oven") +
   theme_void()
 
@@ -186,7 +186,7 @@ g4 <- ggplot(map_latest) +
     values = c('White', 'Green', 'Yellow', 'Orange', 'Red', '#8B0000')
   ) +
   labs(title = "Kerala weather warning",
-       subtitle = glue("Date: {col5} {year(now())}"),
+       subtitle = glue("Date: {col5}-{year(now())}"),
        caption = "Source: IMD, Created by: Open-oven") +
   theme_void()
 
@@ -215,11 +215,12 @@ g5 <- ggplot(map_latest) +
     values = c('White', 'Green', 'Yellow', 'Orange', 'Red', '#8B0000')
   ) +
   labs(title = "Kerala weather warning",
-       subtitle = glue("Date: {col6} {year(now())}"),
+       subtitle = glue("Date: {col6}-{year(now())}"),
        caption = "Source: IMD, Created by: Open-oven") +
   theme_void()
 
 girafe( ggobj = g5)
+
 #ggiraph(code = {print(g5)}, zoom_max = 1, width = 10)
 ```
 <!-- ### Day 6 -->
@@ -247,3 +248,7 @@ What does these alerts actually mean ?
 +--------------+--------------------------------------+------------------------+
 | Red alert    | Extremely Heavy Rainfall (>204.4mm)  | Warning (Take action)  |  
 +--------------+--------------------------------------+------------------------+
+
+
+
+* Source: [IMD Trivandrum](https://mausam.imd.gov.in/thiruvananthapuram)
