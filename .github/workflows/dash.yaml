@@ -13,7 +13,7 @@ on:
   schedule:
     - cron: '10 11 * * *'
     - cron: '00 08 * * *'
-    - cron: '30 03 * * *'
+    - cron: '50 03 * * *'
     
 jobs:
   autoscrape:
