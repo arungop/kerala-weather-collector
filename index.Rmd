@@ -24,10 +24,12 @@ Last compiled on : `r format(Sys.time(), '%d %B, %Y')`
 
 ```{r setup, include=FALSE}
 
-
-if (!require("pacman")) install.packages("pacman")
-pacman::p_load(tidyverse,sf,glue,lubridate, flexdashboard, ggiraph)
-
+library(tidyverse)
+library(sf)
+library(glue)
+library(lubridate)
+library(flexdashboard)
+library(ggiraph)
 
 
 # load data
