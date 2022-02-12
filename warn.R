@@ -5,6 +5,7 @@ library(tabulizer)
 library(tidyverse)
 library(lubridate)
 library(jsonlite)
+library(janitor)
 
 
 # Source data
@@ -45,11 +46,9 @@ mutate(V1= c("Thiruvananthapuram","Kollam","Pathanamthitta",
 combined <- combined[,c(6,1,2,3,4,5)] 
 
 
-warning_five <- rbind(header,combined)
+warning_five <- rbind(header,combined) %>% 
+  row_to_names(row_number = 1)
 
-names(warning_five) <- warning_five[1,]
-
-warning_five <- warning_five[-1,]
 
 
 # time series
@@ -64,13 +63,13 @@ rownames(df2) <- 1:nrow(df2)
 # Write output
 write.csv(warning_five,"./data/weather_warn.csv", row.names = F,quote=F)
 
-write.csv(df2,"./data/weather_warn_ts.csv", row.names = F,quote=F)
+#write.csv(df2,"./data/weather_warn_ts.csv", row.names = F,quote=F)
 
 #weather_a  <- read_csv("./data/weather_warn.csv") 
 #weather_t <-  read_csv("./data/weather_warn_ts.csv")
 
 view(warning_five)
-view(df2)
+#view(df2)
 
 
 

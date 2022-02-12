@@ -21,7 +21,6 @@ Last compiled on : `r format(Sys.time(), '%d %B, %Y')`
 
 
 
-
 ```{r setup, include=FALSE}
 
 library(tidyverse)
@@ -34,6 +33,8 @@ library(ggiraph)
 
 # load data
 
+source("warn.R", local = knitr::knit_global())
+
 map_in <- st_read("./data/kerala/kerala_lak.shp")
 
 weather_a  <- read_csv("./data/weather_warn.csv")
@@ -43,10 +44,14 @@ weather_a  <- read_csv("./data/weather_warn.csv")
 
 weather_a[weather_a == "No rain"] <- "0"
 weather_a[weather_a == "L." ] <- "1"
+weather_a[weather_a == "L. to M" ] <- "1"
+weather_a[weather_a == "L to M" ] <- "1"
 weather_a[weather_a == "VL" ] <- "0"
 weather_a[weather_a == "VL." ] <- "0"
 weather_a[weather_a == "M" ] <- "2"
 weather_a[weather_a == "M." ] <- "2"
+weather_a[weather_a == "M. to H" ] <- "2"
+weather_a[weather_a == "M to H" ] <- "2"
 weather_a[weather_a == "H" ] <- "3"
 weather_a[weather_a == "H." ] <- "3"
 weather_a[weather_a == "VH" ] <- "4"
@@ -254,3 +259,9 @@ What does these alerts actually mean ?
 
 
 * Source: [IMD Trivandrum](https://mausam.imd.gov.in/thiruvananthapuram)
+
+
+
+
+
+

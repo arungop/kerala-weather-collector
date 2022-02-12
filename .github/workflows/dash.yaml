@@ -14,6 +14,7 @@ on:
     - cron: '10 11 * * *'
     - cron: '00 08 * * *'
     - cron: '50 03 * * *'
+    - cron: '00 05 * * *'
     
 jobs:
   autoscrape:
@@ -51,12 +52,16 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
           install.packages('tidyverse')
+          install.packages('rJava')
+          remotes::install_github(c('ropensci/tabulizerjars', 'ropensci/tabulizer'), INSTALL_opts = '--no-multiarch', dependencies = c('Depends', 'Imports'))
+          install.packages('tabulizer')
           install.packages('flexdashboard')
           install.packages('rmarkdown')
           install.packages('sf')
           install.packages('packman')
           install.packages('glue')
           install.packages('ggiraph')
+          install.packages('janitor')
         shell: Rscript {0}
 
     # Render Dashboard using rmarkdown
