@@ -22,7 +22,6 @@ library(lubridate)
 library(flexdashboard)
 library(ggiraph)
 
-
 # load data
 
 source("warn.R", local = knitr::knit_global())
