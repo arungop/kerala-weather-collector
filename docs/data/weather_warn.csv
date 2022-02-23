@@ -1,11 +1,11 @@
-District,22-Feb,23-Feb,24-Feb,25-Feb,26-Feb
-Thiruvananthapuram,L to M,L.,L.,L.,L to M
-Kollam,L to M,L.,L.,L.,L to M
-Pathanamthitta,L to M,L.,L.,L.,L to M
-Alappuzha,L to M,L.,L.,L.,L to M
-Kottayam,L to M,L.,L.,L.,L to M
-Ernakulam,L to M,L.,L.,L.,L to M
-Idukki,L to M,L.,L.,L.,L to M
+District,23-Feb,24-Feb,25-Feb,26-Feb,27-Feb
+Thiruvananthapuram,L.,L.,L.,L to M,No rain
+Kollam,L.,L.,L.,L to M,No rain
+Pathanamthitta,L.,L.,L.,L to M,No rain
+Alappuzha,L.,L.,L.,L to M,No rain
+Kottayam,L.,L.,L.,L to M,No rain
+Ernakulam,L.,L.,L.,L to M,No rain
+Idukki,L.,L.,L.,L to M,No rain
 Thrissur,No rain,No rain,No rain,No rain,No rain
 Palakkad,No rain,No rain,No rain,No rain,No rain
 Malappuram,No rain,No rain,No rain,No rain,No rain
@@ -13,4 +13,4 @@ Kozhikode,No rain,No rain,No rain,No rain,No rain
 Wayanad,No rain,No rain,No rain,No rain,No rain
 Kannur,No rain,No rain,No rain,No rain,No rain
 Kasaragode,No rain,No rain,No rain,No rain,No rain
-Lakshadweep,No rain,L.,L.,L.,No rain
+Lakshadweep,L.,L.,L.,No rain,No rain
