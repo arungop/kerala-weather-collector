@@ -85,7 +85,7 @@ warn_plot <- function(col) {
       ),
       values = c('White', '#188f14', 'Yellow', 'Orange', 'Red', '#8B0000')
     ) +
-    labs(title = "Kerala Rainfall Forecast \n (for next five days)",
+    labs(title = "Rainfall Alert for the week- \n Weather Forecast for Kerala",
          subtitle = glue("Date: {col}-{year(now())}"),
          caption = "Source: INDIAN METEOROLOGICAL DEPARTMENT \nCreated by: open-oven.github.io") +
     theme_void()+
