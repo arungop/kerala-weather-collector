@@ -1,6 +1,6 @@
 # Kerala weather collector and Warning dashboard
 
-Updates daily weather data of Kerala, India from https://mausam.imd.gov.in/. Thanks to gh-actions and R.
+Updates daily weather data of Kerala, India from https://mausam.imd.gov.in/. Thanks to gh-actions and R. [Source:](https://github.com/Open-Oven/kerala-weather-collector)
 
 ## Five days weather warning dashboard
 
