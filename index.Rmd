@@ -132,7 +132,7 @@ m <- leaflet(map_ker) %>%
   addMiniMap(
     tiles = providers$Esri.OceanBasemap,
     position = 'bottomleft', 
-    width = 150, height = 150,
+    width = 120, height = 120,
     toggleDisplay = FALSE)
 ```
 

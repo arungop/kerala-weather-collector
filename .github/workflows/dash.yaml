@@ -59,8 +59,7 @@ jobs:
           install.packages('rmarkdown')
           install.packages('sf')
           install.packages('packman')
-          install.packages('glue')
-          install.packages('ggiraph')
+          install.packages('leaflet')
           install.packages('janitor')
         shell: Rscript {0}
 
