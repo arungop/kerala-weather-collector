@@ -7,8 +7,6 @@ output:
     social: menu
     source_code: embed
 ---
-
-
 Last compiled on : `r format(Sys.time(), '%d %B, %Y')`
 
 
@@ -17,10 +15,9 @@ Last compiled on : `r format(Sys.time(), '%d %B, %Y')`
 
 library(tidyverse)
 library(sf)
-library(glue)
 library(lubridate)
 library(flexdashboard)
-library(ggiraph)
+library(leaflet)
 
 # load data
 
@@ -33,22 +30,22 @@ weather_a  <- read_csv("./data/weather_warn.csv")
 
 # re-code
 
-weather_a[weather_a == "No rain"] <- "0"
-weather_a[weather_a == "L." ] <- "1"
-weather_a[weather_a == "L. to M" ] <- "1"
-weather_a[weather_a == "L to M" ] <- "1"
-weather_a[weather_a == "VL" ] <- "0"
-weather_a[weather_a == "VL." ] <- "0"
-weather_a[weather_a == "M" ] <- "2"
-weather_a[weather_a == "M." ] <- "2"
-weather_a[weather_a == "M. to H" ] <- "2"
-weather_a[weather_a == "M to H" ] <- "2"
-weather_a[weather_a == "H" ] <- "3"
-weather_a[weather_a == "H." ] <- "3"
-weather_a[weather_a == "VH" ] <- "4"
-weather_a[weather_a == "VH." ] <- "4"
-weather_a[weather_a == "XH" ] <- "5"
-weather_a[weather_a == "XH." ] <- "5"
+weather_a[weather_a == "No rain"] <- "No alert"
+weather_a[weather_a == "L." ] <- "Green alert"
+weather_a[weather_a == "L. to M" ] <- "Green alert"
+weather_a[weather_a == "L to M" ] <- "Green alert"
+weather_a[weather_a == "VL" ] <- "No alert"
+weather_a[weather_a == "VL." ] <- "No alert"
+weather_a[weather_a == "M" ] <- "Yellow alert"
+weather_a[weather_a == "M." ] <- "Yellow alert"
+weather_a[weather_a == "M. to H" ] <- "Yellow alert"
+weather_a[weather_a == "M to H" ] <- "Yellow alert"
+weather_a[weather_a == "H" ] <- "Orange alert"
+weather_a[weather_a == "H." ] <- "Orange alert"
+weather_a[weather_a == "VH" ] <- "Red alert"
+weather_a[weather_a == "VH." ] <- "Red alert"
+weather_a[weather_a == "XH" ] <- "Red alert - Extremely heavy rainfall"
+weather_a[weather_a == "XH." ] <- "Red alert - Extremely heavy rainfall"
 
 
 # col
@@ -69,89 +66,96 @@ col4 <- sym(names(map_latest)[4])
 col5 <- sym(names(map_latest)[5])
 col6 <- sym(names(map_latest)[6])
 
-# Plot
-warn_plot <- function(col) {
-  g1 <- ggplot(map_latest) +
-    geom_sf(aes(fill = !!col)) +
-    geom_sf_interactive(aes(fill = !!col,tooltip = Name_1))+
-    scale_fill_manual(name = "Rainfall alerts",
-      labels = c(
-        "No alert",
-        "Green alert",
-        "Yellow alert",
-        "Orange alert",
-        "Red alert",
-        "Extreme heavy rainfall"
-      ),
-      values = c('White', '#188f14', 'Yellow', 'Orange', 'Red', '#8B0000')
-    ) +
-    labs(title = "Rainfall Alert for the week- \n Weather Forecast for Kerala",
-         subtitle = glue("Date: {col}-{year(now())}"),
-         caption = "Source: INDIAN METEOROLOGICAL DEPARTMENT \nCreated by: open-oven.github.io") +
-    theme_void()+
-    theme(
-       plot.title = element_text(size = rel(1.5),family = "serif"),
-       legend.title = element_text(face = "bold"),
-       plot.caption = element_text(hjust = 0, face = "italic",colour = '#281bde'))
-  
-return(  girafe( ggobj = g1))
-  
-#ggsave(g1, file = paste0("./maps/", col, ".png"), 
-  #device = "png")
-}
 
+
+col <- colnames(map_latest[2:6])
+
+# Leaflet ideas-----
+
+# maplatest copy
+
+map_ker <- map_latest %>% 
+  `colnames<-`(c("District","d1","d2","d3","d4","d5","geometry"))
+
+# color factor
+
+pal <- 
+  colorFactor(palette = c('White', '#188f14', 'Yellow', 'Orange', 'Red', '#8B0000'), 
+              levels = c("No alert","Green alert","Yellow alert","Orange alert",
+                         "Red alert","Red alert - Extremely heavy rainfall"))
+
+
+
+m <- leaflet(map_ker) %>% 
+  addTiles()  %>% 
+  
+  # Day 1
+  addPolygons(fillColor  = pal(map_ker$d1), fillOpacity = .5,
+              popup = paste("Date: ",col2, "<br>",
+                            "District: ",map_ker$District, "<br>",
+                            "Rainfall alert: ", map_ker$d1, "<br>"), group = col[1]) %>% 
+  
+  # Day 2
+  addPolygons(fillColor  = pal(map_ker$d2), fillOpacity = .5,
+              popup = paste("Date: ",col3, "<br>",
+                            "District: ",map_ker$d1, "<br>",
+                            "Rainfall alert: ", map_ker$d2, "<br>") , group = col[2]) %>% 
+  
+  #Day 3
+  addPolygons(fillColor  = pal(map_ker$d3), fillOpacity = .5,
+              popup = paste("Date: ",col4, "<br>",
+                            "District: ",map_ker$d1, "<br>",
+                            "Rainfall alert: ", map_ker$d3, "<br>") , group = col[3]) %>% 
+  # Day 4
+  addPolygons(fillColor  = pal(map_ker$d4), fillOpacity = .5,
+              popup = paste("Date: ",col5, "<br>",
+                            "District: ",map_ker$d1, "<br>",
+                            "Rainfall alert: ", map_ker$d4, "<br>") , group = col[4]) %>% 
+  
+  # Day 5
+  
+  addPolygons(fillColor  = pal(map_ker$d5), fillOpacity = .5,
+              popup = paste("Date: ",col6, "<br>",
+                            "District: ",map_ker$d1, "<br>",
+                            "Rainfall alert: ", map_ker$d5, "<br>") , group = col[5]) %>% 
+  
+  setView(lng = 76.5711, lat = 10.5, zoom = 7) %>%
+  
+  #addLegend(position = "bottomright",pal = pal,
+            #values = c("No alert","Green alert","Yellow alert","Orange alert",
+                       #"Red alert","Red alert - Extremely heavy rainfall") ) %>% 
+  
+  addLayersControl(overlayGroups = col[1:5] ,
+                   options = layersControlOptions(collapsed = F))%>% 
+  
+  # add inset map
+  addMiniMap(
+    tiles = providers$Esri.OceanBasemap,
+    position = 'bottomleft', 
+    width = 150, height = 150,
+    toggleDisplay = FALSE)
 ```
 
-Maps 
+
+
+Rainfall alert 
 =====================================  
 
 Column {.tabset}
 -----------------------------------------------------------------------
 
-### Day 1 
+### Rainfall Alert for the week - Weather Forecast for Kerala
 
-```{r fig.width=8, fig.height=12, fig.fullwidth=TRUE, echo=FALSE }
-# Plot Day 1
+```{r echo=FALSE }
+# Rainfall Alert for the week - Weather Forecast for Kerala
 
-warn_plot(col2)
-```
-
-### Day 2 
-
-```{r fig.width=8, fig.height=12, fig.fullwidth=TRUE , echo=FALSE}
-# Plot Day 2
-warn_plot(col3)
-```
-
-
-
-### Day 3  
-
-```{r fig.width=8, fig.height=12, fig.fullwidth=TRUE, echo=FALSE}
-# Plot Day 3
-warn_plot(col4)
-```
-
-### Day 4 
-
-```{r fig.width=8, fig.height=12, fig.fullwidth=TRUE, echo=FALSE}
-
-# Plot Day 4
-warn_plot(col5)
-```
-
-### Day 5  
-
-```{r fig.width=8, fig.height=12, fig.fullwidth=TRUE, echo=FALSE}
-
-# Plot Day 5
-
-warn_plot(col6)
+m
 ```
 
 
 Info
 =====================================  
+
 
 What does these alerts actually mean ?
  
@@ -176,9 +180,3 @@ What does these alerts actually mean ?
 * Source: [IMD Trivandrum](https://mausam.imd.gov.in/thiruvananthapuram)
 
 * All maps are generated automatically from the INDIAN METEOROLOGICAL DEPARTMENT bulletin.
-
-
-
-
-
-
