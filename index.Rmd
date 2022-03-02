@@ -126,7 +126,7 @@ m <- leaflet(map_ker) %>%
                        #"Red alert","Red alert - Extremely heavy rainfall") ) %>% 
   
   addLayersControl(overlayGroups = col[1:5] ,
-                   options = layersControlOptions(collapsed = F))%>% 
+                   options = layersControlOptions(collapsed = T))%>% 
   
   # add inset map
   addMiniMap(
@@ -149,7 +149,8 @@ Column {.tabset}
 ```{r echo=FALSE }
 # Rainfall Alert for the week - Weather Forecast for Kerala
 
-m
+m %>% 
+  hideGroup(col[2:5])
 ```
 
 
