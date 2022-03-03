@@ -11,7 +11,7 @@ Last compiled on : `r format(Sys.time(), '%d %B, %Y')`
 
 
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, warning=FALSE}
 
 library(tidyverse)
 library(sf)
@@ -88,7 +88,7 @@ pal <-
 
 m <- leaflet(map_ker) %>% 
   addTiles()  %>% 
-  
+  addPolygons(fillColor  = pal(map_ker$District), fillOpacity = 0, color = "black") %>%
   # Day 1
   addPolygons(fillColor  = pal(map_ker$d1), fillOpacity = .5,
               popup = paste("Date: ",col2, "<br>",
@@ -98,25 +98,25 @@ m <- leaflet(map_ker) %>%
   # Day 2
   addPolygons(fillColor  = pal(map_ker$d2), fillOpacity = .5,
               popup = paste("Date: ",col3, "<br>",
-                            "District: ",map_ker$d1, "<br>",
+                            "District: ",map_ker$District, "<br>",
                             "Rainfall alert: ", map_ker$d2, "<br>") , group = col[2]) %>% 
   
   #Day 3
   addPolygons(fillColor  = pal(map_ker$d3), fillOpacity = .5,
               popup = paste("Date: ",col4, "<br>",
-                            "District: ",map_ker$d1, "<br>",
+                            "District: ",map_ker$District, "<br>",
                             "Rainfall alert: ", map_ker$d3, "<br>") , group = col[3]) %>% 
   # Day 4
   addPolygons(fillColor  = pal(map_ker$d4), fillOpacity = .5,
               popup = paste("Date: ",col5, "<br>",
-                            "District: ",map_ker$d1, "<br>",
+                            "District: ",map_ker$District, "<br>",
                             "Rainfall alert: ", map_ker$d4, "<br>") , group = col[4]) %>% 
   
   # Day 5
   
   addPolygons(fillColor  = pal(map_ker$d5), fillOpacity = .5,
               popup = paste("Date: ",col6, "<br>",
-                            "District: ",map_ker$d1, "<br>",
+                            "District: ",map_ker$District, "<br>",
                             "Rainfall alert: ", map_ker$d5, "<br>") , group = col[5]) %>% 
   
   setView(lng = 76.5711, lat = 10.5, zoom = 7) %>%
