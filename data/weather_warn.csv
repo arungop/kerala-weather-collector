@@ -1,12 +1,12 @@
 District,04-Mar,05-Mar,06-Mar,07-Mar,08-Mar
-Thiruvananthapuram,L.,L to M,L to M,L to M,No rain
-Kollam,L.,L to M,L to M,L to M,No rain
-Pathanamthitta,L.,L to M,L to M,L to M,L to M
-Alappuzha,No rain,L to M,L to M,L to M,No rain
-Kottayam,No rain,No rain,L to M,L to M,No rain
-Ernakulam,No rain,L to M,L to M,L to M,No rain
-Idukki,L.,L to M,L to M,L to M,L to M
-Thrissur,No rain,No rain,No rain,L to M,No rain
+Thiruvananthapuram,L.,L.,L.,L to M,L to M
+Kollam,L.,L.,L.,L to M,L to M
+Pathanamthitta,No rain,No rain,L.,L to M,L to M
+Alappuzha,No rain,L.,L.,L to M,L to M
+Kottayam,No rain,No rain,L.,L to M,L to M
+Ernakulam,No rain,No rain,L.,L to M,L to M
+Idukki,No rain,No rain,L.,L to M,L to M
+Thrissur,No rain,No rain,No rain,L to M,L to M
 Palakkad,No rain,No rain,No rain,L to M,L to M
 Malappuram,No rain,No rain,No rain,No rain,L to M
 Kozhikode,No rain,No rain,No rain,No rain,No rain
