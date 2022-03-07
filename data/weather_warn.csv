@@ -1,16 +1,16 @@
 District,07-Mar,08-Mar,09-Mar,10-Mar,11-Mar
-Thiruvananthapuram,L.,L.,L.,No rain,No rain
-Kollam,L.,L.,L.,L.,No rain
-Pathanamthitta,L.,L.,L.,L.,No rain
-Alappuzha,L.,L.,L.,L.,No rain
-Kottayam,L.,L.,L.,L.,No rain
-Ernakulam,L.,L.,L.,No rain,No rain
-Idukki,L.,L.,L.,L.,No rain
+Thiruvananthapuram,L to M,L.,No rain,No rain,No rain
+Kollam,L to M,L.,L.,L.,L.
+Pathanamthitta,L to M,L.,L.,L.,L.
+Alappuzha,L to M,L.,L.,L.,No rain
+Kottayam,L to M,L.,L.,L.,No rain
+Ernakulam,L to M,L.,L.,No rain,L.
+Idukki,L to M,L.,No rain,L.,L.
 Thrissur,No rain,No rain,No rain,No rain,No rain
-Palakkad,No rain,L.,L.,No rain,No rain
-Malappuram,No rain,L.,L.,No rain,No rain
-Kozhikode,No rain,L.,L.,No rain,No rain
-Wayanad,No rain,No rain,L.,No rain,No rain
+Palakkad,No rain,No rain,No rain,No rain,No rain
+Malappuram,L.,No rain,No rain,No rain,No rain
+Kozhikode,L.,No rain,No rain,No rain,No rain
+Wayanad,No rain,No rain,No rain,No rain,No rain
 Kannur,No rain,No rain,No rain,No rain,No rain
 Kasaragode,No rain,No rain,No rain,No rain,No rain
-Lakshadweep,No rain,No rain,L.,No rain,No rain
+Lakshadweep,No rain,No rain,L.,L.,No rain
