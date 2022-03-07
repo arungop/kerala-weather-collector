@@ -61,6 +61,7 @@ jobs:
           install.packages('packman')
           install.packages('leaflet')
           install.packages('janitor')
+          install.packages('formattable')
         shell: Rscript {0}
 
     # Render Dashboard using rmarkdown

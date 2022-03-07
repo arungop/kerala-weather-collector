@@ -18,6 +18,7 @@ library(sf)
 library(lubridate)
 library(flexdashboard)
 library(leaflet)
+library(formattable)
 
 # load data
 
@@ -27,6 +28,7 @@ map_in <- st_read("./data/kerala/kerala_lak.shp")
 
 weather_a  <- read_csv("./data/weather_warn.csv")
 
+warning_code <- read_csv("./data/warning.csv")
 
 # re-code
 
@@ -141,10 +143,10 @@ m <- leaflet(map_ker) %>%
 Rainfall alert 
 =====================================  
 
-Column {.tabset}
+Column {.tabset }
 -----------------------------------------------------------------------
 
-### Rainfall Alert for the week - Weather Forecast for Kerala
+### Rainfall Alert for the week - Weather Forecast for Kerala {.no-mobile}
 
 ```{r echo=FALSE }
 # Rainfall Alert for the week - Weather Forecast for Kerala
@@ -154,28 +156,36 @@ m %>%
 ```
 
 
-Info
+### What does these alerts means ? {.no-mobile}
+
+```{r}
+formattable(warning_code[1:3]) %>% 
+   na.omit()
+```
+
+
+Column {.tabset .mobile }
+-----------------------------------------------------------------------
+
+### Rainfall Alert for the week - Weather Forecast for Kerala 
+
+```{r echo=FALSE }
+# Rainfall Alert for the week - Weather Forecast for Kerala
+
+m %>% 
+  hideGroup(col[2:5])
+```
+
+
+### What does these alerts means ? 
+
+```{r}
+formattable(warning_code[1:3]) %>% 
+   na.omit()
+```
+
+Info 
 =====================================  
-
-
-What does these alerts actually mean ?
- 
-+--------------+--------------------------------------+------------------------+ 
-| Type         | Intensity of rainfall                | Warning colour code    |
-+==============+======================================+========================+
-| No alert     | Very Light Rainfall (0.1 to 2.4 mm)  | No warning (No action) |
-+--------------+--------------------------------------+------------------------+
-| Green alert  | Light rainfall (2.5-15.5 mm)         | No warning (No action) |
-+--------------+--------------------------------------+------------------------+
-| Yellow alert | Moderate (15.6-64.4 mm)              | Watch (Be updated)     |
-+--------------+--------------------------------------+------------------------+
-| Orange alert | Heavy Rainfall (64.5-115.5 mm)       | Alert (Be prepared)    |
-+--------------+--------------------------------------+------------------------+
-| Red alert    | Very Heavy Rainfall (115.6-204,4 mm) | Warning (Take action)  |
-+--------------+--------------------------------------+------------------------+
-| Red alert    | Extremely Heavy Rainfall (>204.4mm)  | Warning (Take action)  |  
-+--------------+--------------------------------------+------------------------+
-
 
 
 * Source: [IMD Trivandrum](https://mausam.imd.gov.in/thiruvananthapuram)

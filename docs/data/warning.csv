@@ -1,0 +1,7 @@
+Type ,Intensity of rainfall ,Warning color code 
+No alert ,Very light Rainfall (0.1 – 2.4 mm) ,No warning ( No action ) 
+Green alert ,Light rainfall (2.5-15.5 mm) ,No warning (No action) 
+Yellow alert ,Moderate (15.6-64.4 mm) ,Watch (Be updated) 
+Orange alert ,Heavy Rainfall (64.5-115.5 mm) ,Alert (Be prepared) 
+Red alert ,"Very Heavy Rainfall (115.6-204,4 mm) ",Warning (Take action) 
+Red alert ,Extremely Heavy Rainfall (>204.4mm) ,Warning (Take action) 
