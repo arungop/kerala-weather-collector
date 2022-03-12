@@ -1,9 +1,24 @@
 Date,Station_Index_Number,Maximum Temperature (°C),Minimum Temperature (°C),Rainfall (mm)
+12.03.2022,Thiruvananthapuram City (43371),34.5,24.6,0.0
+12.03.2022,Thiruvananthapuram Airport (43372),32.7,22.9,0.0
+12.03.2022,Punalur (43354),37.4,20.0,0.0
+12.03.2022,Alappuzha (43352),36.2,26.1,0.0
+12.03.2022,Kottayam (43355),37.3,24.3,0.0
+12.03.2022,Kochi Airport (43353),32.0,25.4,0.0
+12.03.2022,CIAL Kochi (43336),35.7,24.3,0.0
+12.03.2022,Vellanikkara (43357),38.6,24.4,0.0
+12.03.2022,Palakkad (43335),38.0,23.7,0.0
+12.03.2022,Karipur Airport (43320),33.9,24.3,0.0
+12.03.2022,Kozhikode City (43314),35.6,26.2,0.0
+12.03.2022,Kannur (43315),36.6,26.0,0.0
+12.03.2022,Agathi Airport (43266),32.0,28.0,0.0
+12.03.2022,Amini (43311),33.6,27.0,0.0
+12.03.2022,Minicoy (43369),33.4,24.5,0.0
 11.03.2022,Thiruvananthapuram City (43371),34.2,24.2,0.0
 11.03.2022,Thiruvananthapuram Airport (43372),31.9,22.9,0.0
 11.03.2022,Punalur (43354),38.6,20.5,0.0
 11.03.2022,Alappuzha (43352),35.2,25.5,0.0
-11.03.2022,Kottayam (43355),37.0,23.5,0.0
+11.03.2022,Kottayam (43355),37,23.5,0.0
 11.03.2022,Kochi Airport (43353),32.8,24.8,0.0
 11.03.2022,CIAL Kochi (43336),35.1,23.3,0.0
 11.03.2022,Vellanikkara (43357),38.4,22.7,0.0
@@ -11,9 +26,9 @@ Date,Station_Index_Number,Maximum Temperature (°C),Minimum Temperature (°C),Ra
 11.03.2022,Karipur Airport (43320),34.1,24.1,0.0
 11.03.2022,Kozhikode City (43314),35.8,26.2,0.0
 11.03.2022,Kannur (43315),36.5,25.8,0.0
-11.03.2022,Agathi Airport (43266),32.0,27.2,0.0
+11.03.2022,Agathi Airport (43266),32,27.2,0.0
 11.03.2022,Amini (43311),31.4,25.8,0.0
-11.03.2022,Minicoy (43369),33.2,25.0,0.0
+11.03.2022,Minicoy (43369),33.2,25,0.0
 10.03.2022,Thiruvananthapuram City (43371),35,24.6,0.0
 10.03.2022,Thiruvananthapuram Airport (43372),32.4,23.3,0.0
 10.03.2022,Punalur (43354),37.5,20,0.0
