@@ -42,12 +42,14 @@ weather_a[weather_a == "M" ] <- "Yellow alert"
 weather_a[weather_a == "M." ] <- "Yellow alert"
 weather_a[weather_a == "M. to H" ] <- "Yellow alert"
 weather_a[weather_a == "M to H" ] <- "Yellow alert"
+weather_a[weather_a == "ISOL. H" ] <- "Yellow alert"
 weather_a[weather_a == "H" ] <- "Orange alert"
 weather_a[weather_a == "H." ] <- "Orange alert"
 weather_a[weather_a == "VH" ] <- "Red alert"
 weather_a[weather_a == "VH." ] <- "Red alert"
 weather_a[weather_a == "XH" ] <- "Red alert - Extremely heavy rainfall"
 weather_a[weather_a == "XH." ] <- "Red alert - Extremely heavy rainfall"
+
 
 
 # col
