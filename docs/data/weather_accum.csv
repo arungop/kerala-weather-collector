@@ -1,7 +1,22 @@
 Date,Station_Index_Number,Maximum Temperature (°C),Minimum Temperature (°C),Rainfall (mm)
+02.05.2022,Thiruvananthapuram City (43371),32.8,26.4,0.0
+02.05.2022,Thiruvananthapuram Airport (43372),33.9,26.8,0.0
+02.05.2022,Punalur (43354),33.4,22.5,8.6
+02.05.2022,Alappuzha (43352),34.3,27.0,0.0
+02.05.2022,Kottayam (43355),35.0,24.0,0.0
+02.05.2022,Kochi Airport (43353),31.4,24.4,42.0
+02.05.2022,CIAL Kochi (43336),32.4,24.3,15.0
+02.05.2022,Vellanikkara (43357),33.2,24.1,10.3
+02.05.2022,Palakkad (43335),33.3,23.5,17.6
+02.05.2022,Karipur Airport (43320),32.8,25.3,0.0
+02.05.2022,Kozhikode City (43314),35.4,27.7,0.0
+02.05.2022,Kannur (43315),34.2,25.9,0.8
+02.05.2022,Agathi Airport (43266),33.0,27.6,0.0
+02.05.2022,Amini (43311),31.8,27.7,0.0
+02.05.2022,Minicoy (43369),34.1,25.7,3.7
 01.05.2022,Thiruvananthapuram City (43371),33.4,26.4,0.0
 01.05.2022,Thiruvananthapuram Airport (43372),33.5,26.9,0.0
-01.05.2022,Punalur (43354),35.5,23.0,tr
+01.05.2022,Punalur (43354),35.5,23,tr
 01.05.2022,Alappuzha (43352),33.5,28.6,0.0
 01.05.2022,Kottayam (43355),35.2,26.2,0.0
 01.05.2022,Kochi Airport (43353),32.2,27.6,4.0
@@ -11,7 +26,7 @@ Date,Station_Index_Number,Maximum Temperature (°C),Minimum Temperature (°C),Ra
 01.05.2022,Karipur Airport (43320),33.4,23.8,0.0
 01.05.2022,Kozhikode City (43314),33.9,26.5,0.0
 01.05.2022,Kannur (43315),34.4,24.4,12.6
-01.05.2022,Agathi Airport (43266),32.8,26.0,0.0
+01.05.2022,Agathi Airport (43266),32.8,26,0.0
 01.05.2022,Amini (43311),31.4,29.8,0.0
 01.05.2022,Minicoy (43369),34.1,27.6,0.0
 30.04.2022,Thiruvananthapuram City (43371),33.7,25.2,32.6
