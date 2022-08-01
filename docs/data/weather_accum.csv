@@ -1,11 +1,26 @@
 Date,Station_Index_Number,Maximum Temperature (°C),Minimum Temperature (°C),Rainfall (mm)
-31.07.2022,Thiruvananthapuram City (43371),32.0,23.6,1.7
-31.07.2022,Thiruvananthapuram Airport (43372),31.0,24.0,0.3
-31.07.2022,Punalur (43354),33.4,21.0,3.2
+01.08.2022,Thiruvananthapuram City (43371),32.0,23.6,64.3
+01.08.2022,Thiruvananthapuram Airport (43372),30.3,23.5,42.4
+01.08.2022,Punalur (43354),33.5,20.5,86.4
+01.08.2022,Alappuzha (43352),32.8,23.8,67.6
+01.08.2022,Kottayam (43355),32.5,23.0,56.4
+01.08.2022,Kochi Airport (43353),29.8,24.6,57.4
+01.08.2022,CIAL Kochi (43336),31.8,24.0,14.4
+01.08.2022,Vellanikkara (43357),31.7,25.2,5.3
+01.08.2022,Palakkad (43335),34.3,24.3,2.4
+01.08.2022,Karipur Airport (43320),30.6,23.4,1.1
+01.08.2022,Kozhikode City (43314),33.0,25.0,3.0
+01.08.2022,Kannur (43315),31.4,25.5,0.4
+01.08.2022,Agathi Airport (43266),30.0,27.8,0.0
+01.08.2022,Amini (43311),29.1,25.2,1.4
+01.08.2022,Minicoy (43369),29.5,23.2,53.6
+31.07.2022,Thiruvananthapuram City (43371),32,23.6,1.7
+31.07.2022,Thiruvananthapuram Airport (43372),31,24,0.3
+31.07.2022,Punalur (43354),33.4,21,3.2
 31.07.2022,Alappuzha (43352),31.8,24.5,3.2
-31.07.2022,Kottayam (43355),33.0,23.0,6.6
+31.07.2022,Kottayam (43355),33,23,6.6
 31.07.2022,Kochi Airport (43353),30.6,25.2,3.0
-31.07.2022,CIAL Kochi (43336),33.3,24.0,2.5
+31.07.2022,CIAL Kochi (43336),33.3,24,2.5
 31.07.2022,Vellanikkara (43357),33.5,24.9,tr
 31.07.2022,Palakkad (43335),33.7,24.2,0.0
 31.07.2022,Karipur Airport (43320),31.6,23.2,1.1
@@ -13,7 +28,7 @@ Date,Station_Index_Number,Maximum Temperature (°C),Minimum Temperature (°C),Ra
 31.07.2022,Kannur (43315),32.7,25.9,1.8
 31.07.2022,Agathi Airport (43266),29.8,27.6,22.7
 31.07.2022,Amini (43311),30.8,25.5,2.4
-31.07.2022,Minicoy (43369),31.0,25.0,17.4
+31.07.2022,Minicoy (43369),31,25,17.4
 30.07.2022,Thiruvananthapuram City (43371),31.9,25.3,tr
 30.07.2022,Thiruvananthapuram Airport (43372),29.9,25.3,tr
 30.07.2022,Punalur (43354),34.5,21.5,3.0
