@@ -1,16 +1,16 @@
 District,05-Sep,06-Sep,07-Sep,08-Sep,09-Sep
-Thiruvananthapuram,L to M,L to M,L to M,L to M,L to M
-Kollam,L to M,L to M,L to M,L to M,L to M
-Pathanamthitta,ISOL. H,ISOL. H,ISOL. H,L to M,L to M
-Alappuzha,L to M,ISOL. H,ISOL. H,L to M,L to M
-Kottayam,ISOL. H,ISOL. H,ISOL. H,L to M,L to M
-Ernakulam,ISOL. H,ISOL H. to VH,ISOL. H,L to M,L to M
-Idukki,ISOL. H,ISOL H. to VH,ISOL. H,L to M,L to M
-Thrissur,L to M,ISOL. H,ISOL. H,ISOL. H,L to M
-Palakkad,L to M,L to M,L to M,L to M,L to M
-Malappuram,ISOL. H,ISOL. H,ISOL H. to VH,ISOL H. to VH,L to M
-Kozhikode,L to M,ISOL. H,ISOL. H,ISOL. H,L to M
-Wayanad,ISOL. H,ISOL. H,ISOL. H,ISOL H. to VH,L to M
-Kannur,L to M,ISOL. H,L to M,L to M,L to M
-Kasaragode,L to M,ISOL. H,L to M,L to M,L to M
-Lakshadweep,ISOL. H,ISOL. H,L to M,L to M,L to M
+Thiruvananthapuram,L to M,X H,L to M,L to M,L to M
+Kollam,L to M,X H,L to M,L to M,L to M
+Pathanamthitta,ISOL. H,X H,ISOL. H,L to M,L to M
+Alappuzha,L to M,ISOL `H to VH,ISOL. H,L to M,ISOL. H
+Kottayam,ISOL. H,ISOL `H to VH,ISOL. H,L to M,ISOL. H
+Ernakulam,ISOL. H,ISOL `H to VH,ISOL `H to VH,L to M,ISOL. H
+Idukki,ISOL. H,X H,ISOL `H to VH,L to M,ISOL. H
+Thrissur,ISOL. H,ISOL. H,`XH,ISOL. H,L to M
+Palakkad,ISOL. H,ISOL. H,ISOL `H to VH,ISOL. H,L to M
+Malappuram,ISOL. H,ISOL. H,`XH,ISOL. H,L to M
+Kozhikode,ISOL. H,ISOL. H,`XH,ISOL `H to VH,ISOL. H
+Wayanad,ISOL. H,ISOL. H,`XH,ISOL. H,ISOL. H
+Kannur,L to M,ISOL. H,ISOL `H to VH,ISOL `H to VH,ISOL. H
+Kasaragode,L to M,ISOL. H,ISOL. H,ISOL `H to VH,ISOL. H
+Lakshadweep,ISOL `H to VH,ISOL. H,ISOL. H,L to M,L to M
