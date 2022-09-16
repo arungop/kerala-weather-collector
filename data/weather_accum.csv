@@ -1,4 +1,19 @@
 Date,Station_Index_Number,Maximum Temperature (°C),Minimum Temperature (°C),Rainfall (mm)
+16.09.2022,Thiruvananthapuram City (43371),31.6,23.8,0.0
+16.09.2022,Thiruvananthapuram Airport (43372),30.8,23.7,0.0
+16.09.2022,Punalur (43354),33.0,22.4,0.0
+16.09.2022,Alappuzha (43352),33.2,25.6,1.2
+16.09.2022,Kottayam (43355),33.0,22.8,0.0
+16.09.2022,Kochi Airport (43353),30.2,24.4,0.4
+16.09.2022,CIAL Kochi (43336),32.1,23.0,0.0
+16.09.2022,Vellanikkara (43357),31.7,23.4,0.2
+16.09.2022,Palakkad (43335),31.9,24.7,0.0
+16.09.2022,Karipur Airport (43320),30.2,23.2,tr
+16.09.2022,Kozhikode City (43314),32.4,24.9,0.4
+16.09.2022,Kannur (43315),30.4,24.2,2.5
+16.09.2022,Agathi Airport (43266),30.6,26.8,0.0
+16.09.2022,Amini (43311),30.2,25.0,0.7
+16.09.2022,Minicoy (43369),30.6,25.2,0.0
 15.09.2022,Thiruvananthapuram City (43371),31.4,24.3,0.0
 15.09.2022,Thiruvananthapuram Airport (43372),30.4,24.5,0.0
 15.09.2022,Punalur (43354),33.2,22.2,0.0
@@ -12,8 +27,8 @@ Date,Station_Index_Number,Maximum Temperature (°C),Minimum Temperature (°C),Ra
 15.09.2022,Kozhikode City (43314),31.5,24.5,0.7
 15.09.2022,Kannur (43315),32.4,23.8,7.4
 15.09.2022,Agathi Airport (43266),30.6,27.4,0.0
-15.09.2022,Amini (43311),30.2,25.0,0.0
-15.09.2022,Minicoy (43369),31.0,24.0,0.0
+15.09.2022,Amini (43311),30.2,25,0.0
+15.09.2022,Minicoy (43369),31,24,0.0
 14.09.2022,Thiruvananthapuram City (43371),31,24.2,0.8
 14.09.2022,Thiruvananthapuram Airport (43372),31.3,24.5,0.0
 14.09.2022,Punalur (43354),31.6,21,3.2
