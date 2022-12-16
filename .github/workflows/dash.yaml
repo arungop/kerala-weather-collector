@@ -58,6 +58,7 @@ jobs:
           install.packages('leaflet')
           install.packages('flexdashboard')
           install.packages('rmarkdown')
+          install.packages('formattable')
           install.packages('sf')
           install.packages('packman')
           install.packages('glue')
