@@ -55,6 +55,7 @@ jobs:
           install.packages('rJava')
           remotes::install_github(c('ropensci/tabulizerjars', 'ropensci/tabulizer'), INSTALL_opts = '--no-multiarch', dependencies = c('Depends', 'Imports'))
           install.packages('tabulizer')
+          install.packages('leaflet')
           install.packages('flexdashboard')
           install.packages('rmarkdown')
           install.packages('sf')
