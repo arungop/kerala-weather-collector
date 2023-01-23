@@ -1,11 +1,11 @@
 District,23-Jan,24-Jan,25-Jan,26-Jan,27-Jan
-Thiruvananthapuram,L.,L.,No rain,No rain,No rain
+Thiruvananthapuram,L.,L.,No rain,L.,L.
 Kollam,L.,L.,No rain,L.,L.
 Pathanamthitta,L.,L.,No rain,L.,L.
 Alappuzha,No rain,L.,No rain,No rain,No rain
 Kottayam,No rain,L.,No rain,No rain,No rain
 Ernakulam,No rain,L.,L.,No rain,No rain
-Idukki,No rain,L.,L.,No rain,No rain
+Idukki,L.,L.,L.,No rain,No rain
 Thrissur,No rain,No rain,No rain,No rain,No rain
 Palakkad,No rain,No rain,No rain,No rain,No rain
 Malappuram,No rain,L.,No rain,No rain,No rain
@@ -13,4 +13,4 @@ Kozhikode,No rain,No rain,No rain,No rain,No rain
 Wayanad,No rain,No rain,No rain,No rain,No rain
 Kannur,No rain,No rain,No rain,No rain,No rain
 Kasaragode,No rain,No rain,No rain,No rain,No rain
-Lakshadweep,L.,L.,L to M,L.,L.
+Lakshadweep,L.,L to M,L to M,L.,L.
