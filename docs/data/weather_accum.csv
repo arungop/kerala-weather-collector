@@ -1,14 +1,29 @@
 Date,Station_Index_Number,Maximum Temperature (°C),Minimum Temperature (°C),Rainfall (mm)
-14.03.2023,Thiruvananthapuram City (43371),35.0,24.1,0.0
-14.03.2023,Thiruvananthapuram Airport (43372),33.0,25.2,0.0
-14.03.2023,Punalur (43354),37.4,18.0,0.0
+15.03.2023,Thiruvananthapuram City (43371),33.5,24.6,0.0
+15.03.2023,Thiruvananthapuram Airport (43372),32.5,25.1,0.0
+15.03.2023,Punalur (43354),36.5,20.5,0.0
+15.03.2023,Alappuzha (43352),36.0,26.0,0.0
+15.03.2023,Kottayam (43355),37.6,23.0,0.0
+15.03.2023,Kochi Airport (43353),33.4,27.0,0.0
+15.03.2023,CIAL Kochi (43336),36.9,25.0,0.0
+15.03.2023,Vellanikkara (43357),38.0,25.3,0.0
+15.03.2023,Palakkad (43335),37.4,25.0,0.0
+15.03.2023,Karipur Airport (43320),34.5,25.8,0.0
+15.03.2023,Kozhikode City (43314),35.7,26.2,0.0
+15.03.2023,Kannur (43315),34.2,26.0,0.0
+15.03.2023,Agathi Airport (43266),33.0,27.0,0.0
+15.03.2023,Amini (43311),34.3,26.5,0.0
+15.03.2023,Minicoy (43369),33.0,25.0,0.0
+14.03.2023,Thiruvananthapuram City (43371),35,24.1,0.0
+14.03.2023,Thiruvananthapuram Airport (43372),33,25.2,0.0
+14.03.2023,Punalur (43354),37.4,18,0.0
 14.03.2023,Alappuzha (43352),35.4,25.8,0.0
 14.03.2023,Kottayam (43355),37.5,24.4,0.0
 14.03.2023,Kochi Airport (43353),32.4,26.6,0.0
 14.03.2023,CIAL Kochi (43336),36.6,24.6,0.0
-14.03.2023,Vellanikkara (43357),37.0,24.4,0.0
+14.03.2023,Vellanikkara (43357),37,24.4,0.0
 14.03.2023,Palakkad (43335),35.9,24.3,0.0
-14.03.2023,Karipur Airport (43320),34.4,25.0,0.0
+14.03.2023,Karipur Airport (43320),34.4,25,0.0
 14.03.2023,Kozhikode City (43314),35.8,26.2,0.0
 14.03.2023,Kannur (43315),35.5,25.4,0.0
 14.03.2023,Agathi Airport (43266),32.4,27.6,0.0
