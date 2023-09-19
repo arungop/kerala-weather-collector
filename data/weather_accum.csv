@@ -1,4 +1,19 @@
 Date,Station_Index_Number,Maximum Temperature (°C),Minimum Temperature (°C),Rainfall (mm)
+19.09.2023,Thiruvananthapuram Airport (43372),29.3,23.6,51.2
+19.09.2023,Punalur (43354),32.0,20.5,15.2
+19.09.2023,Alappuzha (43352),32.0,23.8,31.8
+19.09.2023,Kottayam (43355),32.6,23.2,5.0
+19.09.2023,Kochi Airport (43353),29.0,24.0,23.2
+19.09.2023,CIAL Kochi (43336),30.0,23.3,19.6
+19.09.2023,Vellanikkara (43357),30.0,23.3,23.0
+19.09.2023,Palakkad (43335),30.2,23.5,19.4
+19.09.2023,Karipur Airport (43320),30.2,23.2,25.1
+19.09.2023,Kozhikode City (43314),31.7,24.3,17.0
+19.09.2023,Kannur (43315),32.4,24.6,15.2
+19.09.2023,Kannur AP (43253),30.1,23.2,17.5
+19.09.2023,Agathi Airport (43266),31.8,25.8,1.0
+19.09.2023,Amini (43311),31.6,24.6,3.2
+19.09.2023,Minicoy (43369),30.8,25.2,16.4
 18.09.2023,Thiruvananthapuram Airport (43372),29.9,26.1,4.4
 18.09.2023,Punalur (43354),31.4,21.5,6.2
 18.09.2023,Alappuzha (43352),31.8,24.4,1.2
@@ -8,11 +23,11 @@ Date,Station_Index_Number,Maximum Temperature (°C),Minimum Temperature (°C),Ra
 18.09.2023,Vellanikkara (43357),30.7,23.3,14.6
 18.09.2023,Palakkad (43335),28.5,23.9,22.2
 18.09.2023,Karipur Airport (43320),28.7,23.2,19.8
-18.09.2023,Kozhikode City (43314),30.3,24.0,24.3
+18.09.2023,Kozhikode City (43314),30.3,24,24.3
 18.09.2023,Kannur (43315),30.7,24.8,5.6
 18.09.2023,Kannur AP (43253),28.6,23.7,5.6
 18.09.2023,Agathi Airport (43266),31.6,27.8,0.0
-18.09.2023,Amini (43311),31.0,26.6,0.5
+18.09.2023,Amini (43311),31,26.6,0.5
 18.09.2023,Minicoy (43369),32.3,25.3,17.0
 17.09.2023,Thiruvananthapuram Airport (43372),29.1,23.6,34.4
 17.09.2023,Punalur (43354),30.2,21.2,13.8
