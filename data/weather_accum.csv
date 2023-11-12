@@ -1,18 +1,33 @@
 Date,Station_Index_Number,Maximum Temperature (°C),Minimum Temperature (°C),Rainfall (mm)
+12.11.2023,Thiruvananthapuram City (43371),33.0,24.2,20.8
+12.11.2023,Thiruvananthapuram Airport (43372),33.0,24.3,5.3
+12.11.2023,Punalur (43354),34.5,20.0,0.6
+12.11.2023,Alappuzha (43352),32.9,25.1,2.0
+12.11.2023,Kottayam (43355),34.5,23.4,6.4
+12.11.2023,Kochi Airport (43353),32.8,25.8,trace
+12.11.2023,CIAL Kochi (43336),34.3,24.2,4.3
+12.11.2023,Vellanikkara (43357),33.5,25.9,0.0
+12.11.2023,Palakkad (43335),32.9,25.4,0.0
+12.11.2023,Karipur Airport (43320),32.2,25.4,0.0
+12.11.2023,Kozhikode City (43314),34.2,25.4,0.0
+12.11.2023,Kannur (43315),33.5,25.0,0.0
+12.11.2023,Agathi Airport (43266),33.2,27.9,0.0
+12.11.2023,Amini (43311),33.3,26.0,0.0
+12.11.2023,Minicoy (43369),30.7,23.8,46.4
 11.11.2023,Thiruvananthapuram City (43371),31.8,24.2,1.7
 11.11.2023,Thiruvananthapuram Airport (43372),31.1,23.8,1.0
 11.11.2023,Punalur (43354),34.5,20.5,1.9
 11.11.2023,Alappuzha (43352),32.4,24.7,23.5
-11.11.2023,Kottayam (43355),33.2,24.0,6.4
-11.11.2023,Kochi Airport (43353),30.8,25.0,1.2
+11.11.2023,Kottayam (43355),33.2,24,6.4
+11.11.2023,Kochi Airport (43353),30.8,25,1.2
 11.11.2023,CIAL Kochi (43336),33.5,24.7,16.9
 11.11.2023,Vellanikkara (43357),32.8,24.9,0.0
 11.11.2023,Palakkad (43335),32.1,26.6,0.0
-11.11.2023,Karipur Airport (43320),32.0,24.9,trace
+11.11.2023,Karipur Airport (43320),32,24.9,trace
 11.11.2023,Kozhikode City (43314),34.2,25.6,trace
 11.11.2023,Kannur (43315),33.9,24.8,0.6
 11.11.2023,Agathi Airport (43266),32.9,25.9,6.3
-11.11.2023,Amini (43311),32.4,24.0,16.0
+11.11.2023,Amini (43311),32.4,24,16.0
 11.11.2023,Minicoy (43369),32.6,25.3,9.0
 10.11.2023,Thiruvananthapuram City (43371),32,24.6,0.6
 10.11.2023,Thiruvananthapuram Airport (43372),31.9,23.9,1.8
