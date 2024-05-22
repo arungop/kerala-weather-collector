@@ -30,7 +30,7 @@ Stay tuned for more updates!
 
 Check out the source code of this project on GitHub. Contributions are welcome!
 
-[![GitHub Repository](https://img.shields.io/github/stars/Open-Oven/kerala-weather-collector?style=social)](https://github.com/Open-Oven/kerala-weather-collector)
+[![GitHub Repository](https://img.shields.io/github/stars/arungop/kerala-weather-collector?style=social)](https://github.com/arungop/kerala-weather-collector)
 
 ## 📝 License
 
