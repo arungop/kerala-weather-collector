@@ -3,7 +3,6 @@
 
 Welcome to the **Kerala Weather Collector and Warning Dashboard** project! This project updates daily weather data of Kerala, India from [IMD Mausam](https://mausam.imd.gov.in/) using GitHub Actions and R. It also provides a five-day weather warning dashboard for Kerala.
 
-![Kerala Weather Dashboard](https://keralaweather.netlify.app/screenshot.png)
 
 ## 🌤️ Five Days Weather Warning Dashboard
 
