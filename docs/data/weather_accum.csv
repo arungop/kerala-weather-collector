@@ -1,5 +1,20 @@
 Date,Station_Index_Number,Maximum Temperature (°C),Minimum Temperature (°C),Rainfall (mm)
-12.07.2024,Thiruvananthapuram Airport (43372),33.0,25.7,0.2
+13.07.2024,Thiruvananthapuram Airport (43372),31.6,24.0,5.0
+13.07.2024,Punalur (43354),32.5,23.2,43.0
+13.07.2024,Alappuzha (43352),32.8,24.2,13.2
+13.07.2024,Kottayam (43355),30.5,22.5,25.8
+13.07.2024,Kochi Airport (43353),30.6,24.2,6.1
+13.07.2024,CIAL Kochi (43336),30.2,23.2,31.0
+13.07.2024,Vellanikkara (43357),30.4,23.8,22.4
+13.07.2024,Palakkad (43335),30.2,23.3,57.3
+13.07.2024,Karipur Airport (43320),27.7,23.1,85.8
+13.07.2024,Kozhikode City (43314),29.2,24.0,104.8
+13.07.2024,Kannur (43315),30.0,23.0,85.0
+13.07.2024,Kannur AP (43253),29.2,23.5,90.4
+13.07.2024,Agathi Airport (43266),30.0,25.2,5.2
+13.07.2024,Amini (43311),29.2,24.2,1.6
+13.07.2024,Minicoy (43369),29.0,25.3,12.5
+12.07.2024,Thiruvananthapuram Airport (43372),33,25.7,0.2
 12.07.2024,Punalur (43354),33.5,24.5,0.4
 12.07.2024,Alappuzha (43352),32.8,26.2,0.2
 12.07.2024,Kottayam (43355),31.8,24.5,0.6
@@ -11,9 +26,9 @@ Date,Station_Index_Number,Maximum Temperature (°C),Minimum Temperature (°C),Ra
 12.07.2024,Kozhikode City (43314),33.6,25.4,12.8
 12.07.2024,Kannur (43315),32.5,25.6,15.2
 12.07.2024,Kannur AP (43253),32.7,24.1,21.4
-12.07.2024,Agathi Airport (43266),31.0,26.3,7.6
+12.07.2024,Agathi Airport (43266),31,26.3,7.6
 12.07.2024,Amini (43311),30.2,24.6,25.3
-12.07.2024,Minicoy (43369),33.0,25.5,9.4
+12.07.2024,Minicoy (43369),33,25.5,9.4
 11.07.2024,Thiruvananthapuram Airport (43372),31,25.1,0.0
 11.07.2024,Punalur (43354),33.2,25,0.0
 11.07.2024,Alappuzha (43352),32,24.2,28.6
