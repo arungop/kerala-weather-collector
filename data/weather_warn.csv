@@ -1,16 +1,16 @@
 District,23-Dec,24-Dec,25-Dec,26-Dec,27-Dec
-Thiruvananthapuram,L.,No rain,No rain,L.,L to M
-Kollam,L.,No rain,No rain,L.,L to M
-Pathanamthitta,L.,No rain,No rain,L.,L to M
-Alappuzha,No rain,No rain,No rain,L.,L to M
-Kottayam,No rain,No rain,No rain,L.,L to M
-Ernakulam,No rain,No rain,No rain,L.,L to M
-Idukki,L.,No rain,No rain,L.,L to M
-Thrissur,No rain,No rain,No rain,L.,L to M
-Palakkad,No rain,No rain,No rain,L.,L to M
-Malappuram,No rain,No rain,No rain,L.,L to M
-Kozhikode,No rain,No rain,No rain,L.,L to M
-Wayanad,No rain,No rain,No rain,L.,L to M
-Kannur,L.,No rain,No rain,L.,L to M
-Kasaragode,L.,No rain,No rain,L.,L to M
-Lakshadweep,No rain,No rain,No rain,No rain,No rain
+Thiruvananthapuram,L.,No rain,No rain,L to M,L to M
+Kollam,L.,No rain,No rain,L to M,L to M
+Pathanamthitta,L.,No rain,No rain,L to M,L to M
+Alappuzha,No rain,No rain,No rain,L to M,L to M
+Kottayam,No rain,No rain,No rain,L to M,L to M
+Ernakulam,No rain,No rain,L.,L to M,L to M
+Idukki,L.,No rain,L.,L to M,L to M
+Thrissur,No rain,No rain,L.,L to M,L to M
+Palakkad,L.,L.,No rain,L to M,L to M
+Malappuram,No rain,L.,No rain,L to M,L to M
+Kozhikode,No rain,L.,L.,L to M,L to M
+Wayanad,No rain,L.,L.,L to M,L to M
+Kannur,L.,L.,L.,L to M,L to M
+Kasaragode,L.,L.,L.,L to M,L to M
+Lakshadweep,No rain,No rain,No rain,L to M,L to M
