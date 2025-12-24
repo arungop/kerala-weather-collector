@@ -19,19 +19,31 @@ jobs:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
+      # -------------------------
+      # Checkout
+      # -------------------------
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      # -------------------------
+      # Setup R + Pandoc
+      # -------------------------
       - name: Setup R
         uses: r-lib/actions/setup-r@v2
 
       - name: Setup Pandoc
         uses: r-lib/actions/setup-pandoc@v2
 
-      - name: Query dependencies
-        run: install.packages('remotes')
+      # -------------------------
+      # Install remotes
+      # -------------------------
+      - name: Install remotes
+        run: install.packages("remotes")
         shell: Rscript {0}
 
+      # -------------------------
+      # Restore R cache
+      # -------------------------
       - name: Restore R package cache
         uses: actions/cache@v4
         with:
@@ -40,34 +52,55 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
 
+      # -------------------------
+      # System dependencies (Java is CRITICAL)
+      # -------------------------
       - name: Install system dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y \
+            default-jre-headless \
             libxml2-dev \
             libcurl4-openssl-dev \
             libssl-dev \
-            default-jre-headless \
             libharfbuzz-dev \
             libfribidi-dev
           sudo R CMD javareconf
 
+      # -------------------------
+      # Install R packages (SAFE ORDER)
+      # -------------------------
       - name: Install R libraries
         run: |
-          install.packages('tidyverse')
-          install.packages('rJava')
+          options(repos = c(CRAN = "https://cloud.r-project.org"))
+
+          # Core packages
+          install.packages(c("tidyverse", "rJava"))
+
+          # Java binding (MUST load)
+          library(rJava)
+
+          # Install tabulizer correctly (GitHub ONLY)
           remotes::install_github(
-            c('ropensci/tabulizerjars', 'ropensci/tabulizer'),
-            INSTALL_opts = '--no-multiarch',
-            dependencies = c('Depends', 'Imports')
+            c("ropensci/tabulizerjars", "ropensci/tabulizer"),
+            INSTALL_opts = "--no-multiarch",
+            dependencies = TRUE
           )
-          install.packages('tabulizer')
+
+          # Fail fast if broken
+          library(tabulizer)
         shell: Rscript {0}
 
+      # -------------------------
+      # Run scraping job
+      # -------------------------
       - name: Run weather job
-        run: source('job.R')
+        run: source("job.R")
         shell: Rscript {0}
 
+      # -------------------------
+      # Commit results (scheduled runs only)
+      # -------------------------
       - name: Commit generated data
         if: github.event_name == 'schedule'
         run: |
